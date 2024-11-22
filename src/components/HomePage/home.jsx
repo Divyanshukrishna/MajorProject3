@@ -1,10 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
 
-// Styled Components
+// Wrapper with Background Image
+const PageWrapper = styled.div`
+  background-image: url('/background.jpg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Full height for the viewport */
+  width: 100vw; /* Full width for the viewport */
+  opacity: 0.9; /* Reduce opacity */
+`;
+
 const NavbarContainer = styled.nav`
   width: 100%;
-  background-color: #f8f9fa; /* Light gray background */
+  background-color: transparent; /* Default transparent */
   padding: 16px 32px;
   display: flex;
   align-items: center;
@@ -14,35 +24,36 @@ const NavbarContainer = styled.nav`
   top: 0;
   left: 0;
   z-index: 1000;
+  transition: background-color 0.3s ease; /* Smooth transition */
+
+  &:hover {
+    background-color: white; /* Turns white on hover */
+  }
 `;
+
 
 const Logo = styled.div`
   display: flex;
   align-items: center;
-  gap: 8px;
-
+  justify-content: center;  /* Center the image inside the div */
+  height: 62px; /* Height of the circular container */
+  width: 60px; /* Width of the circular container */
+  border-radius: 50%; /* This makes the container circular */
+  overflow: hidden; /* Hide the excess part of the image */
   img {
-    height: 60px;
-  }
-
-  h1 {
-    font-size: 1.25rem; /* 20px */
-    font-weight: bold;
-    color: #2b6cb0; /* Blue */
-    margin: 0;
-
-    span {
-      color: #4299e1; /* Lighter Blue */
-    }
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the circular container */
   }
 `;
+
+
 
 const NavLinks = styled.ul`
   display: flex;
   gap: 24px;
   list-style: none;
-  margin: 0;
-  padding: 0;
+  padding-left: 60px;
 
   li {
     font-size: 1rem; /* 16px */
@@ -85,8 +96,6 @@ const ButtonContainer = styled.div`
   }
 `;
 
-
-
 const Navbar = () => {
   return (
     <NavbarContainer>
@@ -117,4 +126,13 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+const App = () => {
+  return (
+    <PageWrapper>
+      <Navbar />
+      {/* Add other content here if needed */}
+    </PageWrapper>
+  );
+};
+
+export default App;
