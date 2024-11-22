@@ -9,7 +9,47 @@ const PageWrapper = styled.div`
   background-repeat: no-repeat;
   height: 100vh; /* Full height for the viewport */
   width: 100vw; /* Full width for the viewport */
-  opacity: 0.9; /* Reduce opacity */
+  opacity: 0.8; /* Reduce opacity */
+  display: flex; /* Set up flexbox layout */
+  justify-content: center;
+  align-items: center;
+`;
+
+const ContentWrapper = styled.div`
+  display: flex;
+  width: 90%; /* Adjust width as needed */
+  max-width: 1200px; /* Set a max width */
+  height: 100%;
+  align-items: center;
+  justify-content: space-between; /* Space out the text and image */
+`;
+
+const LeftSection = styled.div`
+  width: 50%; /* 50% width for the left side */
+  padding: 20px;
+  color: white; /* Text color */
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.5;
+  h1{
+    border: 2px solid red;
+    color: black;
+    font-size: 3.5rem;
+  }
+`;
+
+const RightSection = styled.div`
+  width: 50%; /* 50% width for the right side */
+  padding: 20px;
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional rounded corners */
+  }
 `;
 
 const NavbarContainer = styled.nav`
@@ -31,7 +71,6 @@ const NavbarContainer = styled.nav`
   }
 `;
 
-
 const Logo = styled.div`
   display: flex;
   align-items: center;
@@ -46,8 +85,6 @@ const Logo = styled.div`
     object-fit: cover; /* Ensures the image fills the circular container */
   }
 `;
-
-
 
 const NavLinks = styled.ul`
   display: flex;
@@ -105,9 +142,6 @@ const Navbar = () => {
           src="/logo.jpg" // Replace with your logo path
           alt="Logo"
         />
-        {/* <h1>
-          OPEN<span>ALPR</span>
-        </h1> */}
       </Logo>
 
       {/* Navigation Links */}
@@ -130,7 +164,26 @@ const App = () => {
   return (
     <PageWrapper>
       <Navbar />
-      {/* Add other content here if needed */}
+      <ContentWrapper>
+        {/* Left Section with Text */}
+        <LeftSection>
+          <h1>
+            Automatic license
+            plate recognition
+            made easy
+          </h1>
+          <p>
+          Deploy LPR and vehicle recognition with Rekor's suite of software solutions 
+          designed to provide invaluable vehicle intelligence which enhances business capabilities, 
+          automates tasks, and increases overall community safety!
+          </p>
+        </LeftSection>
+
+        {/* Right Section with Image */}
+        <RightSection>
+          <img src="/your-image.jpg" alt="Right Section Image" />
+        </RightSection>
+      </ContentWrapper>
     </PageWrapper>
   );
 };
