@@ -1,33 +1,33 @@
 import React from 'react';
 import styled from 'styled-components';
 
-// Wrapper with Background Image
+
 const PageWrapper = styled.div`
-  background-image: url('/background.jpg'); /* Replace with your image path */
+  background-image: url('/background.jpg'); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh; /* Full height for the viewport */
-  width: 100vw; /* Full width for the viewport */
-  opacity: 0.8; /* Reduce opacity */
-  display: flex; /* Set up flexbox layout */
+  height: 100vh; 
+  width: 100vw; 
+  opacity: 0.8; 
+  display: flex; 
   justify-content: center;
   align-items: center;
 `;
 
 const ContentWrapper = styled.div`
   display: flex;
-  width: 90%; /* Adjust width as needed */
-  max-width: 1200px; /* Set a max width */
+  width: 90%; 
+  max-width: 1200px;
   height: 100%;
   align-items: center;
-  justify-content: space-between; /* Space out the text and image */
+  justify-content: space-between; 
 `;
 
 const LeftSection = styled.div`
-  width: 50%; /* 50% width for the left side */
+  width: 50%; 
   padding: 20px;
-  color: white; /* Text color */
+  color: white; 
   font-size: 1.5rem;
   font-weight: 600;
   line-height: 1.5;
@@ -53,13 +53,13 @@ const RightSection = styled.div`
   img {
     max-width: 100%;
     height: auto;
-    border-radius: 10px; /* Optional rounded corners */
+    border-radius: 10px; 
   }
 `;
 
 const NavbarContainer = styled.nav`
   width: 100%;
-  background-color: transparent; /* Default transparent */
+  background-color: transparent; 
   padding: 16px 32px;
   display: flex;
   align-items: center;
@@ -69,25 +69,25 @@ const NavbarContainer = styled.nav`
   top: 0;
   left: 0;
   z-index: 1000;
-  transition: background-color 0.3s ease; /* Smooth transition */
+  transition: background-color 0.3s ease; 
 
   &:hover {
-    background-color: white; /* Turns white on hover */
+    background-color: white; 
   }
 `;
 
 const Logo = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;  /* Center the image inside the div */
-  height: 62px; /* Height of the circular container */
-  width: 60px; /* Width of the circular container */
-  border-radius: 50%; /* This makes the container circular */
-  overflow: hidden; /* Hide the excess part of the image */
+  justify-content: center;  
+  height: 62px; 
+  width: 60px; 
+  border-radius: 50%; 
+  overflow: hidden; 
   img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the image fills the circular container */
+    object-fit: cover; 
   }
 `;
 
@@ -98,15 +98,15 @@ const NavLinks = styled.ul`
   padding-left: 60px;
 
   li {
-    font-size: 1rem; /* 16px */
-    color: #2d3748; /* Dark Gray */
+    font-size: 1rem; 
+    color: #2d3748; 
     font-weight: 500;
     cursor: pointer;
     padding-right: 40px;
     font-size: 1.3rem;
 
     &:hover {
-      color: #4299e1; /* Blue on hover */
+      color: #4299e1; 
     }
   }
 `;
@@ -122,9 +122,9 @@ const ButtonContainer = styled.div`
     font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
-    background-color: white; /* Default background color */
-    color: blue; /* Default text color */
-    border: 1px solid blue; /* Blue border */
+    background-color: white; 
+    color: blue;
+    border: 1px solid blue; 
     margin-right: 60px;
     padding: 10px;
     width: 150px;
@@ -132,8 +132,8 @@ const ButtonContainer = styled.div`
     border-radius: 20px;
 
     &:hover {
-      background-color: blue; /* Hover background color */
-      color: white; /* Hover text color */
+      background-color: blue; 
+      color: white; 
     }
   }
 `;
@@ -143,19 +143,19 @@ const ButtonContainer2 = styled.div`
   gap: 16px;
 
   button {
-    padding: 10px 20px; /* Adjust padding for better appearance */
+    padding: 10px 20px; 
     font-size: 1rem;
-    border-radius: 20px; /* Make buttons rounded */
+    border-radius: 20px; 
     font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
-    background-color: white; /* Default background color */
-    color: blue; /* Default text color */
-    border: 1px solid blue; /* Blue border */
+    background-color: white;
+    color: blue; 
+    border: 1px solid blue; 
 
     &:hover {
-      background-color: blue; /* Hover background color */
-      color: white; /* Hover text color */
+      background-color: blue; 
+      color: white;
     }
   }
 `;
@@ -163,15 +163,15 @@ const ButtonContainer2 = styled.div`
 const Navbar = () => {
   return (
     <NavbarContainer>
-      {/* Logo Section */}
+
       <Logo>
         <img
-          src="/logo.jpg" // Replace with your logo path
+          src="/logo.jpg"
           alt="Logo"
         />
       </Logo>
 
-      {/* Navigation Links */}
+
       <NavLinks>
         <li>Use cases</li>
         <li>Products</li>
@@ -179,7 +179,7 @@ const Navbar = () => {
         <li>Company</li>
       </NavLinks>
 
-      {/* Buttons */}
+
       <ButtonContainer>
         <button className="secondary">Sign in</button>
       </ButtonContainer>
@@ -194,7 +194,6 @@ const App = () => {
       <PageWrapper>
         <Navbar />
         <ContentWrapper>
-          {/* Left Section with Text and Buttons */}
           <LeftSection>
             <h1>
               Automatic license
@@ -212,7 +211,6 @@ const App = () => {
             </ButtonContainer2>
           </LeftSection>
   
-          {/* Right Section with Image */}
           <RightSection>
             <img src="/your-image.jpg" alt="Right Section Image" />
           </RightSection>
