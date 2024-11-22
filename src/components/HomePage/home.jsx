@@ -32,18 +32,23 @@ const LeftSection = styled.div`
   font-weight: 600;
   line-height: 1.5;
   h1{
-    border: 2px solid red;
     color: black;
     font-size: 3.5rem;
+    font-weight: 750;
   }
+  p{
+    color: black;
+    font-weight: 350;
+  }
+
 `;
 
 const RightSection = styled.div`
-  width: 50%; /* 50% width for the right side */
+  width: 50%; 
   padding: 20px;
   display: flex;
-  justify-content: center; /* Center the image horizontally */
-  align-items: center; /* Center the image vertically */
+  justify-content: center; 
+  align-items: center; 
   
   img {
     max-width: 100%;
@@ -173,9 +178,9 @@ const App = () => {
             made easy
           </h1>
           <p>
-          Deploy LPR and vehicle recognition with Rekor's suite of software solutions 
-          designed to provide invaluable vehicle intelligence which enhances business capabilities, 
-          automates tasks, and increases overall community safety!
+            Deploy LPR and vehicle recognition with Rekor's suite of software solutions 
+            designed to provide invaluable vehicle intelligence which enhances business capabilities, 
+            automates tasks, and increases overall community safety!
           </p>
         </LeftSection>
 
