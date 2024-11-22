@@ -138,6 +138,28 @@ const ButtonContainer = styled.div`
   }
 `;
 
+const ButtonContainer2 = styled.div`
+  display: flex;
+  gap: 16px;
+
+  button {
+    padding: 10px 20px; /* Adjust padding for better appearance */
+    font-size: 1rem;
+    border-radius: 20px; /* Make buttons rounded */
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: white; /* Default background color */
+    color: blue; /* Default text color */
+    border: 1px solid blue; /* Blue border */
+
+    &:hover {
+      background-color: blue; /* Hover background color */
+      color: white; /* Hover text color */
+    }
+  }
+`;
+
 const Navbar = () => {
   return (
     <NavbarContainer>
@@ -165,32 +187,38 @@ const Navbar = () => {
   );
 };
 
+
+
 const App = () => {
-  return (
-    <PageWrapper>
-      <Navbar />
-      <ContentWrapper>
-        {/* Left Section with Text */}
-        <LeftSection>
-          <h1>
-            Automatic license
-            plate recognition
-            made easy
-          </h1>
-          <p>
-            Deploy LPR and vehicle recognition with Rekor's suite of software solutions 
-            designed to provide invaluable vehicle intelligence which enhances business capabilities, 
-            automates tasks, and increases overall community safety!
-          </p>
-        </LeftSection>
+    return (
+      <PageWrapper>
+        <Navbar />
+        <ContentWrapper>
+          {/* Left Section with Text and Buttons */}
+          <LeftSection>
+            <h1>
+              Automatic license
+              plate recognition
+              made easy
+            </h1>
+            <p>
+              Deploy LPR and vehicle recognition with Rekor's suite of software solutions 
+              designed to provide invaluable vehicle intelligence which enhances business capabilities, 
+              automates tasks, and increases overall community safety!
+            </p>
+            <ButtonContainer2>
+              <button className="get-started">Get Started</button>
+              <button className="learn-more">Learn More</button>
+            </ButtonContainer2>
+          </LeftSection>
+  
+          {/* Right Section with Image */}
+          <RightSection>
+            <img src="/your-image.jpg" alt="Right Section Image" />
+          </RightSection>
+        </ContentWrapper>
+      </PageWrapper>
+    );
+  };
 
-        {/* Right Section with Image */}
-        <RightSection>
-          <img src="/your-image.jpg" alt="Right Section Image" />
-        </RightSection>
-      </ContentWrapper>
-    </PageWrapper>
-  );
-};
-
-export default App;
+export default App
