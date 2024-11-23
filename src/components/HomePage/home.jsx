@@ -212,7 +212,7 @@ const App = () => {
           </LeftSection>
   
           <RightSection>
-            <img src="/your-image.jpg" alt="Right Section Image" />
+            <img src="/download.jpeg" alt="Right Section Image" />
           </RightSection>
         </ContentWrapper>
       </PageWrapper>
